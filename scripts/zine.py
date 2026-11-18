@@ -282,15 +282,13 @@ def project(numeral, title, tech, desc, filename, seed, angle, wip=False):
 
 def footer():
     rng = random.Random(5)
-    h = 120
-    kw = brush.width("七転八起", 34)
+    h = 178
     content = f"""
-      {misreg(brush.path("七転八起", 34, 44, 72), RED, MAROON, 2.4, 1.8)}
-      <path d="{type_.path("cai sete vezes, levanta oito.", 16, 44 + kw + 20, 68, 0.4)}" fill="{INK}"/>"""
+      {misreg(brush.path("七転八起", 76, 44, 106), RED, MAROON, 3.2, 2.4)}
+      <path d="{type_.path("Caia sete vezes, levante-se oito.", 15, 48, 142, 0.4)}" fill="{SOFT}"/>"""
     extra = stamp(W - 140, h / 2, "LINKEDIN", 18, 6) + tape(70, 14, 80, 22, -10)
     body = paper(h, 0.5, rng, 5, content, extra)
-    (OUT / "footer.svg").write_text(doc(h, body, "LinkedIn — 七転八起, cai sete vezes, levanta oito", 5))
-
+    (OUT / "footer.svg").write_text(doc(h, body, "LinkedIn — 七転八起: Caia sete vezes, levante-se oito", 5))
 
 hero()
 label_strip("作品", "PROJETOS", "sec-projetos.svg", 41)
