@@ -57,7 +57,7 @@ class Face:
 
 serif_black = Face(SERIF, 900)
 serif_bold = Face(SERIF, 700)
-mono = Face(MONO, 400)
+mono = Face(MONO, 500)
 mono_bold = Face(MONO, 700)
 
 
@@ -112,8 +112,9 @@ def svg(w, h, body, label, seed=7, animate=True, kanji_css=""):
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{label}">{defs(w, h, seed, animate)}
   <style>{kanji_css}</style>
   <rect width="{w}" height="{h}" rx="14" fill="{PAPER}"/>
-  <g clip-path="inset(0 round 14px)">{body}
-  {grain_layer(w, h)}
+  <g clip-path="inset(0 round 14px)">
+  {grain_layer(w, h, 0.32)}{body}
+  {grain_layer(w, h, 0.07)}
   </g>
 </svg>
 """
@@ -124,7 +125,7 @@ def banner():
     first = serif_black.path("Felipe", 84, 56, 168)
     last = serif_black.path("Gegembauer", 84, 56, 254)
     handle = mono_bold.path("~/gengibrepower", 15, 60, 70, tracking=1.2)
-    sub = mono.path("backend · sistemas distribuídos · redes", 17, 60, 320, tracking=0.4)
+    sub = mono_bold.path("backend · sistemas distribuídos · redes", 19, 60, 322, tracking=0.4)
     kanji = [serif_black.vpath(ch, 56, 930, 84 + i * 60) for i, ch in enumerate("七転八起")]
     kanji_g = "".join(
         f'<path d="{d}" fill="{RED}"/>'
@@ -133,7 +134,7 @@ def banner():
     seal_text = serif_black.path("FG", 30, 0, 0)
     seal_w = serif_black.width("FG", 30)
     seal_text = serif_black.path("FG", 30, -seal_w / 2, 11)
-    caption = mono.path("cai sete vezes, levanta oito", 12, 735 - mono.width("cai sete vezes, levanta oito", 12, 0.6) / 2, 336, tracking=0.6)
+    caption = mono.path("cai sete vezes, levanta oito", 14, 735 - mono.width("cai sete vezes, levanta oito", 14, 0.6) / 2, 338, tracking=0.6)
     body = f"""
   <rect x="0" y="{h - 78}" width="{w}" height="78" fill="url(#seigaiha)" opacity="0.16"/>
   <rect x="0" y="{h - 78}" width="{w}" height="2" fill="{RED}" opacity="0.25"/>
@@ -155,8 +156,8 @@ def banner():
   <g filter="url(#brush)">
     <rect x="58" y="276" width="300" height="9" rx="4" fill="{RED}"/>
   </g>
-  <path d="{sub}" fill="{MAROON}"/>
-  <path d="{caption}" fill="{MAROON}" opacity="0.8"/>
+  <path d="{sub}" fill="{INK}"/>
+  <path d="{caption}" fill="{MAROON}"/>
   {hanko(930, 318, 46, seal_text)}"""
     (OUT / "banner.svg").write_text(svg(w, h, body, "Felipe Gegembauer — backend, sistemas distribuídos e redes", seed=7))
 
@@ -210,9 +211,9 @@ def wrap(text, face, size, max_w):
 def card(idx_kanji, title, tech, desc, filename, seed):
     w, h = 490, 190
     t = serif_black.path(title, 30, 34, 58)
-    k = mono_bold.path(tech, 13, 36, 86, tracking=1.0)
-    lines = wrap(desc, mono, 14, w - 70 - 70)
-    descs = "".join(f'<path d="{mono.path(l, 14, 36, 120 + i * 22)}" fill="{MAROON}"/>' for i, l in enumerate(lines))
+    k = mono_bold.path(tech, 14, 36, 88, tracking=1.0)
+    lines = wrap(desc, mono, 16, w - 36 - 30)
+    descs = "".join(f'<path d="{mono.path(l, 16, 36, 126 + i * 25)}" fill="{INK}"/>' for i, l in enumerate(lines))
     kw = serif_black.width(idx_kanji, 26)
     seal = serif_black.path(idx_kanji, 26, -kw / 2, 10)
     body = f"""
@@ -241,14 +242,31 @@ def footer():
     w, h = 1000, 70
     k = serif_black.path("七転八起", 22, 24, 44)
     kw = serif_black.width("七転八起", 22)
-    t = mono.path("cai sete vezes, levanta oito.", 14, 24 + kw + 16, 42, tracking=0.6)
+    t = mono.path("cai sete vezes, levanta oito.", 16, 24 + kw + 16, 43, tracking=0.6)
     body = f"""
   <path d="{k}" fill="{RED}"/>
-  <path d="{t}" fill="{MAROON}"/>"""
+  <path d="{t}" fill="{INK}"/>"""
     (OUT / "footer.svg").write_text(svg(w, h, body, "七転八起 — cai sete vezes, levanta oito", seed=5, animate=False))
 
 
+def about():
+    text = "Desenvolvedor backend e estudante de Engenharia de Software na PUCPR. Trabalho principalmente com Node.js e TypeScript. Nos projetos pessoais, foco em sistemas distribuídos, redes e correção: determinismo, idempotência e testes."
+    size, lh = 21, 34
+    lines = wrap(text, serif_bold, size, 860)
+    w, h = 1000, 60 + lh * len(lines)
+    paths = "".join(
+        f'<path d="{serif_bold.path(l, size, (w - serif_bold.width(l, size)) / 2, 50 + i * lh)}" fill="{INK}"/>'
+        for i, l in enumerate(lines)
+    )
+    body = f"""
+  <g filter="url(#brush)"><rect x="24" y="22" width="6" height="{h - 44}" rx="3" fill="{RED}"/></g>
+  <g filter="url(#brush)"><rect x="{w - 30}" y="22" width="6" height="{h - 44}" rx="3" fill="{RED}"/></g>
+  {paths}"""
+    (OUT / "about.svg").write_text(svg(w, h, body, text, seed=31, animate=False))
+
+
 banner()
+about()
 section("STACK", "技術", "sec-stack.svg")
 section("PROJETOS", "作品", "sec-projetos.svg")
 section("CONTATO", "連絡", "sec-contato.svg")

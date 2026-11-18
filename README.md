@@ -2,9 +2,7 @@
   <img src="assets/banner.svg" alt="Felipe Gegembauer — backend, sistemas distribuídos e redes" width="100%">
 </p>
 
-<p align="center">
-Desenvolvedor backend e estudante de Engenharia de Software na PUCPR. Trabalho principalmente com Node.js e TypeScript. Nos projetos pessoais, foco em sistemas distribuídos, redes e correção: determinismo, idempotência e testes.
-</p>
+<img src="assets/about.svg" alt="Desenvolvedor backend e estudante de Engenharia de Software na PUCPR. Trabalho principalmente com Node.js e TypeScript. Nos projetos pessoais, foco em sistemas distribuídos, redes e correção: determinismo, idempotência e testes." width="100%">
 
 <img src="assets/sec-stack.svg" alt="Stack" width="100%">
 <img src="assets/stack.svg" alt="TypeScript, Node.js, Go, Rust, Zig, C/C++, SQL, Linux" width="100%">
