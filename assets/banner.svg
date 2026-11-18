@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-label="Felipe Gegembauer — backend, sistemas distribuídos e redes">
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'DejaVu Sans Mono', ui-monospace, monospace; }
+  </style>
+  <rect x="0" y="0" width="1000" height="260" rx="12" fill="#282828"/>
+  <rect x="0" y="0" width="1000" height="40" rx="12" fill="#3c3836"/>
+  <rect x="0" y="28" width="1000" height="12" fill="#3c3836"/>
+  <circle cx="26" cy="20" r="6.5" fill="#fb4934"/>
+  <circle cx="48" cy="20" r="6.5" fill="#fabd2f"/>
+  <circle cx="70" cy="20" r="6.5" fill="#b8bb26"/>
+  <text x="500" y="25" text-anchor="middle" class="mono" font-size="13" fill="#a89984">felipe@gegembauer: ~</text>
+  <text x="40" y="88" xml:space="preserve" class="mono" font-size="18"><tspan fill="#8ec07c">~</tspan><tspan fill="#fe8019"> ❯ </tspan><tspan fill="#ebdbb2">whoami</tspan></text>
+  <text x="40" y="146" class="mono" font-size="46" font-weight="700" fill="#ebdbb2">Felipe Gegembauer</text>
+  <text x="40" y="184" class="mono" font-size="18" fill="#a89984">backend <tspan fill="#665c54">·</tspan> sistemas distribuídos <tspan fill="#665c54">·</tspan> redes <tspan fill="#665c54">·</tspan> eng. de software @ PUCPR</text>
+  <text x="40" y="226" xml:space="preserve" class="mono" font-size="18"><tspan fill="#8ec07c">~</tspan><tspan fill="#fe8019"> ❯ </tspan><tspan fill="#ebdbb2">_</tspan></text>
+  <g transform="translate(760,214)">
+    <rect x="0"   y="0" width="22" height="14" rx="2" fill="#fb4934"/>
+    <rect x="28"  y="0" width="22" height="14" rx="2" fill="#fe8019"/>
+    <rect x="56"  y="0" width="22" height="14" rx="2" fill="#fabd2f"/>
+    <rect x="84"  y="0" width="22" height="14" rx="2" fill="#b8bb26"/>
+    <rect x="112" y="0" width="22" height="14" rx="2" fill="#8ec07c"/>
+    <rect x="140" y="0" width="22" height="14" rx="2" fill="#83a598"/>
+    <rect x="168" y="0" width="22" height="14" rx="2" fill="#d3869b"/>
+  </g>
+</svg>
