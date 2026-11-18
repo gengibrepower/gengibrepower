@@ -21,8 +21,8 @@ Desenvolvedor backend e estudante de Engenharia de Software na PUCPR. Trabalho p
 
 | Projeto | Stack | Descrição |
 |---|---|---|
-| [**Exchange**](https://github.com/gengibrepower/Exchange) | Rust | Simulador de exchange com matching determinístico e event sourcing |
 | [**cross-border-pay**](https://github.com/gengibrepower/cross-border-pay) | Go | Gateway de pagamentos internacionais com ledger de partidas dobradas e idempotência |
+| [**Exchange**](https://github.com/gengibrepower/Exchange) | Rust | Simulador de exchange com matching determinístico e event sourcing |
 | [**AMPS**](https://github.com/gengibrepower/AMPS) | TypeScript | Gestão de estacionamentos modelada como grafo de vagas e vias, com roteamento |
 | [**BairdWire**](https://github.com/gengibrepower/BairdWire) | Zig · WebRTC · Svelte | App de comunicação (texto, voz e tela) self-hosted, com SFU próprio e sem servidor central. Em desenvolvimento. |
 
