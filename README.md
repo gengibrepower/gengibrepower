@@ -7,14 +7,14 @@ Desenvolvedor backend e estudante de Engenharia de Software na PUCPR. Trabalho p
 ### Stack
 
 <p>
-  <img src="https://img.shields.io/badge/TypeScript-3c3836?style=flat-square&logo=typescript&logoColor=83a598" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Node.js-3c3836?style=flat-square&logo=nodedotjs&logoColor=b8bb26" alt="Node.js">
-  <img src="https://img.shields.io/badge/Go-3c3836?style=flat-square&logo=go&logoColor=8ec07c" alt="Go">
-  <img src="https://img.shields.io/badge/Rust-3c3836?style=flat-square&logo=rust&logoColor=fe8019" alt="Rust">
-  <img src="https://img.shields.io/badge/Zig-3c3836?style=flat-square&logo=zig&logoColor=fabd2f" alt="Zig">
-  <img src="https://img.shields.io/badge/C%2FC%2B%2B-3c3836?style=flat-square&logo=cplusplus&logoColor=83a598" alt="C/C++">
-  <img src="https://img.shields.io/badge/SQL-3c3836?style=flat-square&logo=sqlite&logoColor=d3869b" alt="SQL">
-  <img src="https://img.shields.io/badge/Linux-3c3836?style=flat-square&logo=linux&logoColor=ebdbb2" alt="Linux">
+  <img src="https://img.shields.io/badge/TypeScript-2a1d1a?style=flat-square&logo=typescript&logoColor=E1F1DE" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Node.js-2a1d1a?style=flat-square&logo=nodedotjs&logoColor=6E8A75" alt="Node.js">
+  <img src="https://img.shields.io/badge/Go-2a1d1a?style=flat-square&logo=go&logoColor=6E8A75" alt="Go">
+  <img src="https://img.shields.io/badge/Rust-2a1d1a?style=flat-square&logo=rust&logoColor=C73421" alt="Rust">
+  <img src="https://img.shields.io/badge/Zig-2a1d1a?style=flat-square&logo=zig&logoColor=B49965" alt="Zig">
+  <img src="https://img.shields.io/badge/C%2FC%2B%2B-2a1d1a?style=flat-square&logo=cplusplus&logoColor=E1F1DE" alt="C/C++">
+  <img src="https://img.shields.io/badge/SQL-2a1d1a?style=flat-square&logo=sqlite&logoColor=A7624B" alt="SQL">
+  <img src="https://img.shields.io/badge/Linux-2a1d1a?style=flat-square&logo=linux&logoColor=E1F1DE" alt="Linux">
 </p>
 
 ### Projetos
@@ -28,4 +28,4 @@ Desenvolvedor backend e estudante de Engenharia de Software na PUCPR. Trabalho p
 
 ### Contato
 
-<a href="https://www.linkedin.com/in/felipe-gegembauer/"><img src="https://img.shields.io/badge/LinkedIn-3c3836?style=flat-square&logo=linkedin&logoColor=83a598" alt="LinkedIn"></a>
+<a href="https://www.linkedin.com/in/felipe-gegembauer/"><img src="https://img.shields.io/badge/LinkedIn-2a1d1a?style=flat-square&logo=linkedin&logoColor=E1F1DE" alt="LinkedIn"></a>
